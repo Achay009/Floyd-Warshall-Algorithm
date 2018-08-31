@@ -12,7 +12,7 @@ namespace floyd_shortest_path
         public const int infinity = 100000 ;
         public void start()
         {
-            Console.WriteLine("Floyd's code for Group 12");
+          //infinity is  set to 100000
             Console.WriteLine("Let Infinity =100000");
             
             Console.WriteLine("Enter the number of nodes");
@@ -61,36 +61,14 @@ namespace floyd_shortest_path
 
 
 
-        //public int[,] copyArray(int[,] old)
-        //{
-        //    int[,] copiedArray = new int[old.GetLength(0), old.GetLength(1)];
 
-        //    for (int row = 0; row < old.GetLength(0); row++)
-        //    {
-        //        for (int column = 0; column < old.GetLength(1); column++)
-        //        {
-
-        //            copiedArray[row, column] = old[row, column];
-
-
-        //        }
-
-
-        //    }
-        //    return copiedArray;
-        //}
-
-
-
+        // start the floyd shortest path
         public void computeFloyd(int[,] graph, int verticesCount)
         {
             
             int[,] distance = graph;
             int[,] Smatrix = createS(distance);
 
-            //for (int i = 0; i < verticesCount; ++i)
-            //    for (int j = 0; j < verticesCount; ++j)
-            //        distance[i, j] = graph[i, j];
             int count = 1;
 
             for (int k = 0; k < verticesCount; k++)
@@ -132,7 +110,7 @@ namespace floyd_shortest_path
 
         }
 
-
+        ///To create the S matrix for floyd
         public int[,]createS(int[,]old)
         {
           
@@ -160,32 +138,8 @@ namespace floyd_shortest_path
         }
 
 
-        //public int[,] updateArray(int[,] newMatrix, int[,] oldMatrix, int[,] sArray, int time)
-        //{
-        //    int[,] updatedSArray = sArray;
 
-
-        //    for (int row = 0; row < oldMatrix.GetLength(0); row++)
-        //    {
-        //        for (int column = 0; column < oldMatrix.GetLength(1); column++)
-        //        {
-        //            if (oldMatrix[row, column] == newMatrix[row, column])
-        //                continue;
-        //            else
-        //            {
-        //                updatedSArray[row, column] = time;
-        //            }
-
-
-        //        }
-
-
-        //    }
-
-        //    return updatedSArray;
-        //}
-
-
+        //To print out any n by n matrix
         public void outPutArray(int[,]nodes)
         {
             for (int row = 0; row < nodes.GetLength(0); row++)
