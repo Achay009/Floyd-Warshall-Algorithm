@@ -69,7 +69,7 @@ namespace floyd_shortest_path
             int[,] distance = graph;
             int[,] Smatrix = createS(distance);
 
-            int count = 1;
+           
 
             for (int k = 0; k < verticesCount; k++)
             {
